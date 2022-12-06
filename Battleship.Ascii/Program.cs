@@ -103,6 +103,7 @@ namespace Battleship.Ascii
                 }
                 Console.WriteLine(isHit ? "Yeah ! Nice hit !" : "Miss");
                 Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("-------------------------------------------------------");
                 position = GetRandomPosition();
                 isHit = GameController.CheckIsHit(myFleet, position);
                 telemetryClient.TrackEvent("Computer_ShootPosition", new Dictionary<string, string>() { { "Position", position.ToString() }, { "IsHit", isHit.ToString() } });
