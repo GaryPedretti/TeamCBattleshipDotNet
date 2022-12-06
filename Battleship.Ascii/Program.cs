@@ -159,6 +159,7 @@ namespace Battleship.Ascii
                     var position = Console.ReadLine();
                     ship.AddPosition(position);
                     telemetryClient.TrackEvent("Player_PlaceShipPosition", new Dictionary<string, string>() { { "Position", position }, { "Ship", ship.Name }, { "PositionInShip", i.ToString() } });
+                    Console.WriteLine("--------------------------------------------------");
                 }
             }
         }
