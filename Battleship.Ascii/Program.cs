@@ -126,7 +126,7 @@ namespace Battleship.Ascii
 
                 Console.WriteLine("-------------------------------------------------------");
             }
-            while (true);
+            while (!gameOver());
         }
 
         public static Position ParsePosition(string input)
@@ -200,6 +200,11 @@ namespace Battleship.Ascii
 
             enemyFleet[4].Positions.Add(new Position { Column = Letters.C, Row = 5 });
             enemyFleet[4].Positions.Add(new Position { Column = Letters.C, Row = 6 });
+        }
+
+        private static Boolean gameOver()
+        {
+            return false;
         }
     }
 }
