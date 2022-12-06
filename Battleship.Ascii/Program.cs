@@ -94,6 +94,7 @@ namespace Battleship.Ascii
                 }
 
                 Console.WriteLine(isHit ? "Yeah ! Nice hit !" : "Miss");
+                Console.WriteLine("-------------------------------------------------------");
 
                 position = GetRandomPosition();
                 isHit = GameController.CheckIsHit(myFleet, position);
@@ -114,6 +115,8 @@ namespace Battleship.Ascii
                     Console.WriteLine(@"                   \  \   /  /");
 
                 }
+
+                Console.WriteLine("-------------------------------------------------------");
             }
             while (true);
         }
@@ -159,7 +162,7 @@ namespace Battleship.Ascii
                     var position = Console.ReadLine();
                     ship.AddPosition(position);
                     telemetryClient.TrackEvent("Player_PlaceShipPosition", new Dictionary<string, string>() { { "Position", position }, { "Ship", ship.Name }, { "PositionInShip", i.ToString() } });
-                    Console.WriteLine("--------------------------------------------------");
+                    Console.WriteLine("-------------------------------------------------------");
                 }
             }
         }
