@@ -181,7 +181,6 @@ namespace Battleship.Ascii
 
             Console.WriteLine("Do you want default postions?" + " [y/n] : ");
             ConsoleKeyInfo cki =    Console.ReadKey();
-            Console.WriteLine(cki.Key.ToString());
 
             if (cki.Key.ToString().ToLower() == "y")
             {
