@@ -51,10 +51,26 @@ namespace Battleship.GameController
                         return true;
                     }
                 }
+
                 ship.IsDestroyed = ship.Positions.All<Position>(x => x.IsHit == true);
+
+                if (ship.IsDestroyed)
+                {
+                    Console.WriteLine("Ship {0} has been destroyed!", ship.Name);
+                }
             }
 
             return false;
+        }
+
+        public static bool AllEnemyShipsSunk(IEnumerable<Ship> ships)
+        {
+            return ships.All<Ship>(x => x.IsDestroyed == true);;
+        }
+
+        public static bool AllMyShipsSunk(IEnumerable<Ship> ships)
+        {
+            return ships.All<Ship>(x => x.IsDestroyed == true);;
         }
 
         /// <summary>
