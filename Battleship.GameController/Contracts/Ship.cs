@@ -12,6 +12,7 @@ namespace Battleship.GameController.Contracts
     public class Ship
     {
         private bool isPlaced;
+        private bool isDestroyed;
 
         #region Constructors and Destructors
 
@@ -78,6 +79,17 @@ namespace Battleship.GameController.Contracts
                 isPlaced = value;
             }
         }
+
+        public bool IsDestroyed
+        {
+            get { return isDestroyed; }
+            set
+            {
+                isDestroyed = value;
+            }
+        }
+
+
         #endregion
     }
 }
