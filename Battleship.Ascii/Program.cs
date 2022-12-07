@@ -256,6 +256,26 @@ namespace Battleship.Ascii
 
         private static Boolean gameOver()
         {
+            if (GameController.AllEnemyShipsSunk(enemyFleet))
+            {
+                foreach (var ship in enemyFleet)
+                {
+                    Console.WriteLine("Enemy ship {0} is destroyed!", ship.Name);
+                }
+                Console.WriteLine("You are the winner!");
+                return true;
+            };
+
+            if (GameController.AllMyShipsSunk(myFleet))
+            {
+                foreach (var ship in myFleet)
+                {
+                    Console.WriteLine("Your ship {0} is destroyed!", ship.Name);
+                }
+                Console.WriteLine("You");
+                return true;
+            }
+
             return false;
         }
     }
