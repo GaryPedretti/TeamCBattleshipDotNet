@@ -50,10 +50,14 @@ namespace Battleship.GameController
                         position.IsHit = true;
                         ship.IsDestroyed = ship.Positions.All<Position>(x => x.IsHit == true);
 
-                        if (ship.IsDestroyed)
+                        foreach (var dship in ships)
                         {
-                            Console.WriteLine("Ship {0} has been destroyed!", ship.Name);
+                            if (dship.IsDestroyed)
+                            {
+                                Console.WriteLine("Ship {0} has been destroyed!", ship.Name);
+                            }    
                         }
+                        
                         return true;
                     }
                 }
