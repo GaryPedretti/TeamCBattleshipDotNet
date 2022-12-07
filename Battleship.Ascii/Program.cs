@@ -101,7 +101,7 @@ namespace Battleship.Ascii
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
                 }
-                Console.WriteLine(isHit ? "Yeah ! Nice hit !" : "Miss");
+                Console.WriteLine(isHit ? "Yeah ! Nice hit !" : "Hit Missed");
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("-------------------------------------------------------");
                 position = GetRandomPosition();
@@ -131,7 +131,7 @@ namespace Battleship.Ascii
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
                 }
-                Console.WriteLine(isHit ? "Computer player has hit your ship !" : "Miss");
+                Console.WriteLine(isHit ? "Computer, player has hit your ship !" : "Hit Missed");
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("-------------------------------------------------------");
             }
