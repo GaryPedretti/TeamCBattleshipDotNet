@@ -54,10 +54,10 @@ namespace Battleship.GameController
                         {
                             if (dship.IsDestroyed)
                             {
-                                Console.WriteLine("Ship {0} has been destroyed!", ship.Name);
+                                Console.WriteLine("Ship {0} has been destroyed!", dship.Name);
                             }    
                         }
-                        
+
                         return true;
                     }
                 }
