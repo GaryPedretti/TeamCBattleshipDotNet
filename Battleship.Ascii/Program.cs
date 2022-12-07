@@ -181,7 +181,8 @@ namespace Battleship.Ascii
 
             Console.WriteLine("Do you want default postions?" + " [y/n] : ");
             ConsoleKeyInfo cki =    Console.ReadKey();
-
+            Console.WriteLine("");
+            
             if (cki.Key.ToString().ToLower() == "y")
             {
                  CreateDefaultFleet();
