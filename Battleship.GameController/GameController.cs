@@ -47,9 +47,11 @@ namespace Battleship.GameController
                 {
                     if (position.Equals(shot))
                     {
+                        position.IsHit = true;
                         return true;
                     }
                 }
+                ship.IsDestroyed = ship.Positions.All<Position>(x => x.IsHit == true);
             }
 
             return false;

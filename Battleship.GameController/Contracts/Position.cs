@@ -7,6 +7,9 @@
     {
         #region Constructors and Destructors
 
+        private bool isHit;
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Position"/> class.
         /// </summary>
@@ -20,6 +23,15 @@
         {
             Column = column;
             Row = row;
+        }
+
+        public bool IsHit
+        {
+            get { return isHit; }
+            set
+            {
+                isHit = value;
+            }
         }
 
         /// <summary>
